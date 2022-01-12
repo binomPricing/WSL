@@ -1,0 +1,32 @@
+baseURL: https://smuclass-wsl.netlify.app/
+title: WSL - Windows Subsystem for Linux
+sutitle: " WSL - 윈도우에서 리눅스를 자유롭게 이용하기 ! " 
+theme: hugo-theme-m10c
+paginate: 8
+menu:
+  main:
+    - identifier: home
+      name: Contents
+      url: /
+      weight: 1
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 2
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 3
+params:
+  author: 권세훈
+  description: ' '
+  menu_item_separator: ' - '
+  social:
+    - icon: github
+      name: Github
+      url: https://github.com/smuclass/WSL
+    - icon: mail
+      name: Mail
+      url: sehoon.kwon@gmail.com
+      
+# template: https://storyweb.info/post/example-config-yaml/      
