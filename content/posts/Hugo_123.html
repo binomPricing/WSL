@@ -1,0 +1,129 @@
+---
+title: "R 에서 Hugo 로 웹페이지 만들기"
+subtitle: "Web Page Making with Hugo in R"
+author: 권세훈(상명대)
+tags:
+  - WSL
+  - R
+  - Hugo
+  - Git
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      toc_collapsed: true
+    toc_depth: 5
+    number_sections: true
+    theme: lumen
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="web-page-making-with-hugo-in-r" class="section level1">
+<h1>Web Page Making with Hugo in R</h1>
+</div>
+<div id="prepare-기본-구조-준비" class="section level1">
+<h1>Prepare 기본 구조 준비</h1>
+<ul>
+<li><a href="https://www.rstudio.com/">RStudio</a> : 개인 작업 담당</li>
+<li><a href="https://github.com/">GitHub</a> : 버전 컨츠롤(for the code version control)</li>
+<li><a href="https://www.netlify.com/">Netlify</a> : 웹페이지 게시(for the web publish)</li>
+</ul>
+</div>
+<div id="github" class="section level1">
+<h1>GitHub</h1>
+<ul>
+<li><p>Create a new repository : naming the project </br>
+저장소 개설 및 프로젝트명 설정</p>
+<ul>
+<li>Public/Private 선택</li>
+<li>Initialize 초기 설정
+<ul>
+<li>README.md</li>
+<li>.gitignore: ex. R</li>
+<li>license: ex. MIT</li>
+</ul></li>
+</ul></li>
+<li><p>copy the repository URL or SSH </br>
+저장소 주소를 복사</p></li>
+</ul>
+</div>
+<div id="rstudio" class="section level1">
+<h1>RStudio</h1>
+<div id="create-a-new-project-새로운-프로젝트-만들기" class="section level2">
+<h2>Create a New Project 새로운 프로젝트 만들기</h2>
+<ul>
+<li>Version Control</li>
+<li>Git</li>
+<li>URL/Name/Directory</li>
+</ul>
+</div>
+<div id="hugo-package-패키지-설치-및-실행" class="section level2">
+<h2>Hugo package 패키지 설치 및 실행</h2>
+<div id="install-package" class="section level3">
+<h3>install Package</h3>
+<pre class="r"><code>install.packages(&quot;blogdown&quot;)
+blogdown::install_hugo()</code></pre>
+<ul>
+<li>Check the Hugo version </br> 미리 버전을 확인하자</li>
+<li>Later, you can check the version by command <code>Hugo_version()</code></li>
+</ul>
+</div>
+<div id="create-website" class="section level3">
+<h3>Create Website</h3>
+<pre class="r"><code>blogdown::new_site(theme=&quot;h-enk/doks&quot;, force = TRUE)</code></pre>
+<ul>
+<li><a href="https://gohugo.io/">Hugo theme</a> 싸이트에서 다른 테마도 이용 가능</li>
+<li>You can use other themes in <a href="https://gohugo.io/">Hugo theme</a></li>
+</ul>
+</div>
+<div id="로컬-환경에서-웨페이지-미리-보기" class="section level3">
+<h3>로컬 환경에서 웨페이지 미리 보기</h3>
+<ul>
+<li>RStudido 에서 임시로 웹서버 기능을 실행해 웹페이지 내용을 미리 볼 수 있다</li>
+</ul>
+</div>
+</div>
+<div id="rstudio-에서-깃-명령-실행" class="section level2">
+<h2>RStudio 에서 깃 명령 실행</h2>
+<div id="깃-명령은-3단계로-구성" class="section level3">
+<h3>깃 명령은 3단계로 구성</h3>
+<ul>
+<li><p>Git requires three steps</p>
+<ol style="list-style-type: decimal">
+<li>add</li>
+<li>commit</li>
+<li>push</li>
+</ol></li>
+<li><p>Rstudio 에서도 Git 방식으로 프로젝트 만들면 Git 메뉴가 생김</p>
+<blockquote>
+<p>Rstudio Git menu provide these three steps</p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>add: click the selection boxes for the files/directories</li>
+<li>commit: writing commit message and click the commit button</li>
+<li>push: click the push button to upload the files to the GitHub</li>
+</ol></li>
+<li><p>한편 Rstudio와 별개로 명령창에서도 깃 명령을 직접 실행할 수도 있음</p>
+<blockquote>
+<p>You can also do the same jobs in your own command line terminal
+자세한 사항은 <a href="/content/posts/Git_guide.html">Git Guide 참고</a></p>
+</blockquote></li>
+</ul>
+</div>
+<div id="짜잔" class="section level3">
+<h3>짜잔</h3>
+<p>앞에서 푸쉬 명령으로 GitHub에 프로젝트를 올리면 바로 Netlify 웹페이지가 생성/수정됨!!!</p>
+</div>
+</div>
+</div>
+<div id="문서-내용-전반의-기본-출처" class="section level1">
+<h1>문서 내용 전반의 기본 출처</h1>
+<ul>
+<li><a href="https://samtoet.cool/posts/how-tf-does-this-blog-thing-work/" class="uri">https://samtoet.cool/posts/how-tf-does-this-blog-thing-work/</a></li>
+<li><a href="https://aispiration.com/comp_document/ds-netlify-protection.html#" class="uri">https://aispiration.com/comp_document/ds-netlify-protection.html#</a></li>
+</ul>
+<hr />
+<p>End of Doc</p>
+</div>
